@@ -6,7 +6,7 @@ function fib(n) {
   let fibSeries = [0, 1];
   for (let i = 2; i <= n; i++) {
     fibSeries.push(
-      fibSeries[fibSeries.length - 2] + fibSeries[fibSeries.length - 1]
+      fibSeries[fibSeries.length - 1] + fibSeries[fibSeries.length - 2]
     );
   }
   return fibSeries[n];
@@ -21,11 +21,11 @@ function fab(n) {
 
   for (let i = 1; i < n; i++) {
     if (temp.length === n) {
-      temp.push(temp[temp.length - 2] + temp[temp.length - 1]);
+      temp.push(temp[temp.length - 1] + temp[temp.length - 2]);
       f = temp[temp.length - 1];
       return f;
     }
-    temp.push(temp[temp.length - 2] + temp[temp.length - 1]);
+    temp.push(temp[temp.length - 1] + temp[temp.length - 2]);
     f = temp[temp.length - 1];
   }
 }
