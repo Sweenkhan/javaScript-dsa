@@ -1,14 +1,13 @@
 //  running sum of one d array?
+
 let arr = [1,2,3,4,5]
 
-function sumOfArray(arr){
-  let result = [];
+function sumOfArray(arr){ 
   let sum = 0;
   for(let i = 0; i < arr.length; i++){
-    sum += arr[i]
-    result.push(sum)
+    sum += arr[i] 
   }
-  return result
+  return sum
 }
 
 console.log(sumOfArray(arr))
