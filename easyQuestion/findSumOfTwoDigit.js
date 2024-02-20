@@ -1,5 +1,5 @@
 // This is my first file for learn javaScript DSA
-let input = 11;
+let input = 8;
 let array = [2, 2, 6, 3, 4];
 
 
