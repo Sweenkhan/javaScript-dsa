@@ -5,16 +5,15 @@ let students = [
   { name: "raje", marks: 44 },
 ];
 
-students.forEach((stu, i) => (students[i].age = 18));         //modifying original array with the help of forEach loop
+let result = students.forEach((stu, i) => students[i].attendance = "yes")
 
-
-let result = students
-  .map((stu) => {
-    if (stu.marks < 60) {
-      stu.marks += 20;
-    }
-    return stu;
-  }).filter((stu) => stu.marks > 60).reduce((acc, curr) => acc + curr.marks, 0);
+let result2 = students.map((stu) => {
+if(stu.marks < 60) { 
+  stu.marks += 20
+}
+return stu }
+).filter((stu, i) => stu.marks > 60).reduce((acc, curr, i) => {
+  return acc + curr.marks} , 0 )
 
   
-console.log(result);
+console.log(result2);
