@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARNING DOM</title>
+</head>
+<body>
+    
+<h2 id="title">DOM Learning</h2>
+<ul>
+    <li class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit1.</li>
+    <li class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit2.</li>
+    <li class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit3.</li>
+    <span style="display: none;">This line for explain textContent attribut</span>
+    <li class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit4.</li>
+</ul>
+<script>
+    
+    let title = document.getElementById("title").innerText               //you can direct see the value of getelement id
+
+    let list = document.getElementsByClassName("item")[1].innerText      // first you have to make it an array. Array.from(list)
+    let list2 = document.getElementsByTagName("li")[2].innerText         // It will give you a html collection array. to check the value 
+   
+    let list4 = document.querySelector("li").innerText 
+    let list5 = document.querySelectorAll("li")                          // It will give you a (nodelist) array. and you can use forEach loop for this function.
+
+    let textContent = document.querySelector("ul").textContent           // textContent can give you also those text, which is not visible in the body.but it has written in the body with css style of display none. 
+    let innerText = document.querySelector("ul").innerText               // you can see only visible content 
+
+
+
+</script>
+</body>
+</html>

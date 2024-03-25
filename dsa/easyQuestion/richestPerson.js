@@ -6,8 +6,8 @@ function richestPerson(arr){
     let richest = 0;
 
     for(let i =0; i<arr.length; i++){ 
-         let result = arr[i].reduce((acc, curr) => acc + curr, 0)
-           if(richest < result) richest = result;
+    let result = arr[i].reduce((acc, curr) => acc + curr, 0)
+    if(richest < result) richest = result;
     }
     return richest
 }
