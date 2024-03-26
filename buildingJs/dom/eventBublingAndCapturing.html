@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT BUBLING AND CAPTURING</title>
+</head>
+
+<body>
+
+    <div class="images" style="display: flex">
+        <ul class="imgList"> 
+            <li><img width="300px" src="https://images.unsplash.com/photo-1682685797795-5640f369a70a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D" alt="unsplash-images"/>
+            </li>
+            <li>
+                <img width="300px" height="200px" src="https://images.unsplash.com/photo-1531131141161-ecdfb1858dd2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D" alt="second" />
+            </li>
+        
+        </ul>  
+     </div>
+    <script>
+//-----------------------this is EVENT BUBLING-------------------
+//first it will call inner event then outer event, 
+// and by default addeventListerner third value will be false
+
+//A. 
+//  document.querySelector(".images").addEventListener("click", () => {
+//        console.log("This is outer click")
+// })
+
+
+// document.querySelectorAll("li").forEach((items) => {
+//       items.addEventListener("click", () => {
+//         console.log("this is inner click")
+//       })
+// })
+
+
+//----------------------------------------THIS IS Event CAPTURING, --------------------------------------------------------
+// it will go from top to bottom, first outer event will get trigred.
+
+//B.
+// document.querySelector(".images").addEventListener("click", () => {
+//        console.log("This is outer click")
+// }, true) // if i will give the value true here. now it will work event capturing.
+
+
+// document.querySelectorAll("li").forEach((items) => {
+//       items.addEventListener("click", () => {
+//         console.log("this is inner click")
+//       }, true)
+// })
+
+
+
+// you can stop to call outer event (stop event bubling).. 
+    
+    document.querySelectorAll("li").forEach((items) => {
+        items.addEventListener("click", (e) => {
+            console.log("this is inner click")
+            e.stopPropagation()         //event bubling will be stop here.
+      })
+})
+
+    </script>
+    
+</body>
+</html>
