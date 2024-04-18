@@ -16,11 +16,24 @@
 </head>
 <body>
     <h3>press any key</h3>
+    <p></p>
     <div class="result"></div>
     <script>
+        let res = document.querySelector("div")
+
+        let time = function(){
+          return   document.querySelector("p").innerHTML = new Date().toLocaleTimeString()
+        }
+
+        const timestart = setInterval(time, 1000)
         window.addEventListener("keydown", function(e){
-            if(e.key == "Backspace") document.querySelector
-          document.querySelector("div").innerText += e.key
+            
+           
+            if(e.key == "Backspace"){
+             res.innerText = res.innerText.substring(res.innerText-2,res.innerHTML.length-1)
+             } else{
+        document.querySelector("div").innerText += e.key
+        }
         })
 
     </script>
